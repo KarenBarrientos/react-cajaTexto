@@ -1,11 +1,30 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Mensaje from './Mensaje';
 
-class App extends Component {
+/*function Mensaje(props){
+  var element = <h1>hola {props.msg}</h1>
+  return element
+}*/
+
+
+class MiComponente extends Component {
+  constructor(props){
+    super(props)
+    this.state = { mensajeIn: this.props.variable }
+  }
+  
   render() {
+    var mundo="Mundo feliz";
     return (
       <div className="App">
+
+        <p> BIENVENIDO </p>
+
+        <Mensaje msg="dos"/>
+        {/*}
+        <h1>hola {this.state.mensajeIn}</h1>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -20,9 +39,10 @@ class App extends Component {
             Learn React
           </a>
         </header>
+    {*/}
       </div>
     );
   }
 }
 
-export default App;
+export default MiComponente;
